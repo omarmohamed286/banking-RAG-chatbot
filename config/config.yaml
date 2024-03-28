@@ -1,0 +1,12 @@
+embedding_model: NeuML/pubmedbert-base-embeddings
+
+local_llm_path: neural-chat-7b-v3-1.Q2_K.gguf
+
+data_splitting_params:
+  data_path: data/
+  chunk_size: 1000
+  chunk_overlap: 100
+
+vector_db_params:
+  persist_directory: stores/pet_cosine
+  collection_metadata: {"hnsw:space": "cosine"}
